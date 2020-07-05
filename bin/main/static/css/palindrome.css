@@ -1,0 +1,31 @@
+body {background-color: #d3d7cf;}
+
+.content-header {
+	text-align: center;
+	text-decoration: underline;
+	text-transform: uppercase;
+	padding-top: 50px;
+}
+
+.main-section {
+	background-color: silver;
+	width: 700px;
+	height: 700px;
+	margin-left: 300px;
+	margin-top: 50px;
+}
+
+.form-section {
+	margin: 150px 150px;
+	padding-bottom: 50px;
+}
+
+.palindrome-submit {
+	text-align: justify;
+	line-height: 50px;
+	text-align: center;
+}
+.highlightError {
+	color: red;
+	padding-top: 10px;
+}

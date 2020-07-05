@@ -18,7 +18,7 @@ public class reterivePalindrome {
 	@Autowired
 	PalindromeService palindromeService;
 	
-	@GetMapping(path = "/v1/palindromes")
+	@GetMapping(path = "/api/v1/palindromes")
 	public @ResponseBody Iterable<Palindrome> getAllPalindroms() {
 		
 		System.out.println("REST - Get Method called");
@@ -27,7 +27,7 @@ public class reterivePalindrome {
 		return palindromes; 
 	}
 	
-	@PostMapping(path = "/v1/palindromes")
+	@PostMapping(path = "/api/v1/palindromes")
 	public @ResponseBody Iterable<Palindrome> storePalindrome(@RequestParam String palindromeValue) {
 		System.out.println("REST - Post controller called...");
 		
