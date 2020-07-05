@@ -1,5 +1,7 @@
 $(document).ready(function () {
 	
+	var paly = [ ];
+	
 	$("#palindromeValue").val('');
 	
 	// Does not allow special characters and numerics
@@ -26,9 +28,9 @@ $(document).ready(function () {
 			}
 			
 			if (givenValue == swapValue)
-				return false;
-			else
 				return true;
+			else
+				return false;
 		},
 		"Enter palindrome value."
 	);
@@ -69,6 +71,8 @@ $(document).ready(function () {
 					$(function() {
 						$("#palindromes").empty();
 						$.each(response, function(i, item) {
+							//console.log(item.palindromValue);
+							paly.push(item.palindromValue);
 							$("#palindromes").append($('<tr/>').append($('<td/>').text(item.palindromValue)));
 						});
 					});
@@ -79,4 +83,11 @@ $(document).ready(function () {
 			});
 		}
 	});
+	
+	$(function() {
+		console.dir("Value = " + paly);
+	    $( "#palindromeValue" ).autocomplete({
+	      source: paly
+	    });
+	 });
 });

@@ -7,14 +7,13 @@
 		<link rel="stylesheet" type="text/css" href="/css/palindrome.css">
 		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
-		
-		<script type="text/javascript" src="/js/test.js"></script>
-		
-		
+    	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+    	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="/js/palindrome-validation.js"></script>
+		<script type="text/javascript" src="/js/getPalindromes.js"></script>
 		
 	</head>
-	<body>
+	<body onload="getPalindromes();">
 		<div class="main-section">
 		
 			<div class="content-header">
@@ -23,9 +22,9 @@
 			
 			<div class="content-section">
 				<div class="form-section">
-					<form id="palindromeform" name="palindromeform" action="#">
+					<form id="palindromeform" name="palindromeform">
 						<label for="first_name">Enter the palindrome</label>
-						<input type="text" id="palindromeValue" name="palindromeValue" />
+						<input type="text" id="palindromeValue" name="palindromeValue" autocomplete="off"/>
 						
 						<div class="palindrome-submit">
 							<input type="submit" id="palindrome-submit" name="palindrome-submit" value="Submit">

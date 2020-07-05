@@ -1,8 +1,5 @@
-$(document).ready(function () {
-	
-	$("#error-paly").hide();
-	
-	/*$.ajax({
+function getPalindromes() {
+	$.ajax({
 		type: "GET",
 		url: "/api/v1/palindromes/",
 		dataType: 'json',
@@ -11,16 +8,17 @@ $(document).ready(function () {
 			
 			// convert string to JSON
 			response = $.parseJSON(response);
-			console.log(response);
 			
 			$(function() {
 				$.each(response, function(i, item) {
+					paly.push(item.palindromValue);
 					$("#palindromes").append($('<tr/>').append($('<td/>').text(item.palindromValue)));
 				});
+				//console.dir("Array Values GET = " + array);
 			});
 		},
 		error: function (error) {
 			console.log(error.status);
 		}
-	});*/
-});
+	});
+}

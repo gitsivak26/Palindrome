@@ -1,8 +1,5 @@
-$(document).ready(function () {
-	
-	$("#error-paly").hide();
-	
-	/*$.ajax({
+function getPalindromes() {
+	$.ajax({
 		type: "GET",
 		url: "/api/v1/palindromes/",
 		dataType: 'json',
@@ -11,7 +8,6 @@ $(document).ready(function () {
 			
 			// convert string to JSON
 			response = $.parseJSON(response);
-			console.log(response);
 			
 			$(function() {
 				$.each(response, function(i, item) {
@@ -22,5 +18,5 @@ $(document).ready(function () {
 		error: function (error) {
 			console.log(error.status);
 		}
-	});*/
-});
+	});
+}
