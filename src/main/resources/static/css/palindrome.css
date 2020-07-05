@@ -25,7 +25,8 @@ body {background-color: #d3d7cf;}
 	line-height: 50px;
 	text-align: center;
 }
-.highlightError {
-	color: red;
-	padding-top: 10px;
+
+.error {
+  color: red;
+  margin-left: 5px;
 }

@@ -1,4 +1,5 @@
 $('#palindromeform').submit(function(e) {
+	
 	var postData = $('#palindromeValue').val();
 	
 	$.ajax({
@@ -22,6 +23,6 @@ $('#palindromeform').submit(function(e) {
 		error: function (error) {
 			console.log(error.status);
 		}
-		e.preventDefault();
 	});
+	e.preventDefault();
 });
