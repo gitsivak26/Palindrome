@@ -1,0 +1,129 @@
+2020-07-04T20:22:36.980+0530 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-XX:MaxMetaspaceSize=256m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=UTF-8, -Duser.country=IN, -Duser.language=en, -Duser.variant]
+2020-07-04T20:22:38.366+0530 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=aa972bac-4907-4f61-9311-15efc2ae8910,javaHome=/usr/local/jdk1.8.0_191,daemonRegistryDir=/home/siva/eclipse-workspace/palindrome/daemon,pid=10675,idleTimeout=10800000,priority=NORMAL,daemonOpts=-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=IN,-Duser.language=en,-Duser.variant]
+2020-07-04T20:22:38.729+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface wlp3s0
+2020-07-04T20:22:38.730+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2020-07-04T20:22:38.730+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:fb64:48ed:c8aa:7678%wlp3s0
+2020-07-04T20:22:38.731+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /2409:4072:891:a958:c692:5ca5:78c2:41d5%wlp3s0
+2020-07-04T20:22:38.731+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /2409:4072:891:a958:710a:1ec5:d019:41d8%wlp3s0
+2020-07-04T20:22:38.776+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /192.168.43.129
+2020-07-04T20:22:38.776+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+2020-07-04T20:22:38.777+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+2020-07-04T20:22:38.777+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo
+2020-07-04T20:22:38.777+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+2020-07-04T20:22:38.810+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [aa3d4481-bbdc-4726-9a6b-342e9093c830 port:40337, addresses:[localhost/127.0.0.1]].
+2020-07-04T20:22:38.828+0530 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Sat Jul 04 20:22:38 IST 2020, with address: [aa3d4481-bbdc-4726-9a6b-342e9093c830 port:40337, addresses:[localhost/127.0.0.1]]
+2020-07-04T20:22:38.828+0530 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [aa3d4481-bbdc-4726-9a6b-342e9093c830 port:40337, addresses:[localhost/127.0.0.1]]
+2020-07-04T20:22:38.828+0530 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=aa972bac-4907-4f61-9311-15efc2ae8910,javaHome=/usr/local/jdk1.8.0_191,daemonRegistryDir=/home/siva/eclipse-workspace/palindrome/daemon,pid=10675,idleTimeout=10800000,priority=NORMAL,daemonOpts=-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=IN,-Duser.language=en,-Duser.variant]
+2020-07-04T20:22:38.830+0530 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [aa3d4481-bbdc-4726-9a6b-342e9093c830 port:40337, addresses:[localhost/127.0.0.1]], context: DefaultDaemonContext[uid=aa972bac-4907-4f61-9311-15efc2ae8910,javaHome=/usr/local/jdk1.8.0_191,daemonRegistryDir=/home/siva/eclipse-workspace/palindrome/daemon,pid=10675,idleTimeout=10800000,priority=NORMAL,daemonOpts=-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=IN,-Duser.language=en,-Duser.variant]
+2020-07-04T20:22:38.870+0530 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-07-04T20:22:38.876+0530 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-07-04T20:22:39.086+0530 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-07-04T20:22:39.106+0530 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+2020-07-04T20:22:39.108+0530 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+2020-07-04T20:22:39.196+0530 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+2020-07-04T20:22:39.199+0530 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+2020-07-04T20:22:39.200+0530 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-07-04T20:22:41.478+0530 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:58722 to /127.0.0.1:40337.
+2020-07-04T20:22:41.929+0530 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.Build
+2020-07-04T20:22:41.929+0530 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received non-IO message from client: Build{id=3b5f2455-f8d5-4809-860a-ef68c83c08d1, currentDir=/home/siva/eclipse/jee-2019-03/eclipse}
+2020-07-04T20:22:41.929+0530 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=3b5f2455-f8d5-4809-860a-ef68c83c08d1, currentDir=/home/siva/eclipse/jee-2019-03/eclipse}.
+2020-07-04T20:22:41.930+0530 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=3b5f2455-f8d5-4809-860a-ef68c83c08d1, currentDir=/home/siva/eclipse/jee-2019-03/eclipse} with connection: socket connection from /127.0.0.1:40337 to /127.0.0.1:58722.
+2020-07-04T20:22:41.967+0530 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=3b5f2455-f8d5-4809-860a-ef68c83c08d1, currentDir=/home/siva/eclipse/jee-2019-03/eclipse}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:40337 to /127.0.0.1:58722] after 0.0 minutes of idle
+2020-07-04T20:22:41.968+0530 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [aa3d4481-bbdc-4726-9a6b-342e9093c830 port:40337, addresses:[localhost/127.0.0.1]]
+2020-07-04T20:22:41.968+0530 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [aa3d4481-bbdc-4726-9a6b-342e9093c830 port:40337, addresses:[localhost/127.0.0.1]]
+2020-07-04T20:22:41.977+0530 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-07-04T20:22:41.977+0530 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-07-04T20:22:41.983+0530 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-07-04T20:22:41.984+0530 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-07-04T20:22:41.984+0530 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-07-04T20:22:41.996+0530 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=3b5f2455-f8d5-4809-860a-ef68c83c08d1, currentDir=/home/siva/eclipse/jee-2019-03/eclipse}. Dispatching build started information...
+2020-07-04T20:22:41.996+0530 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@bd3d83e
+2020-07-04T20:22:42.023+0530 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin, XAUTHORITY=/run/user/1000/gdm/Xauthority, INVOCATION_ID=27989e693f6542d58e179b57230713bd, XMODIFIERS=@im=ibus, XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop, GDMSESSION=ubuntu, TEXTDOMAINDIR=/usr/share/locale/, GTK_IM_MODULE=ibus, DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=65ed859d325f67bf323971725f007dcd, XDG_CURRENT_DESKTOP=ubuntu:GNOME, JOURNAL_STREAM=9:30335, SSH_AGENT_PID=1493, QT4_IM_MODULE=xim, USERNAME=siva, SESSION_MANAGER=local/siva-Vostro-270s:@/tmp/.ICE-unix/1398,unix/siva-Vostro-270s:/tmp/.ICE-unix/1398, LOGNAME=siva, MANAGERPID=1369, PWD=/home/siva, IM_CONFIG_PHASE=2, SHELL=/bin/bash, GNOME_DESKTOP_SESSION_ID=this-is-deprecated, GTK_MODULES=gail:atk-bridge, CLUTTER_IM_MODULE=xim, TEXTDOMAIN=im-config, DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=65ed859d325f67bf323971725f007dcd, XDG_SESSION_DESKTOP=ubuntu, SHLVL=0, OXYGEN_DISABLE_INNER_SHADOWS_HACK=1, QT_IM_MODULE=ibus, XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg, LANG=en_IN, XDG_SESSION_ID=2, XDG_SESSION_TYPE=x11, DISPLAY=:0, _=/usr/bin/dbus-update-activation-environment, LIBOVERLAY_SCROLLBAR=0, GDK_CORE_DEVICE_EVENTS=1, GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1, DESKTOP_SESSION=ubuntu, USER=siva, XDG_MENU_PREFIX=gnome-, WINDOWPATH=2, QT_ACCESSIBILITY=1, XDG_SEAT=seat0, SSH_AUTH_SOCK=/run/user/1000/keyring/ssh, GNOME_SHELL_SESSION_MODE=ubuntu, XDG_VTNR=2, XDG_RUNTIME_DIR=/run/user/1000, HOME=/home/siva, DBUS_STARTER_BUS_TYPE=session}
+2020-07-04T20:22:42.079+0530 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2020-07-04T20:22:42.101+0530 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 10675). The daemon log file: /home/siva/eclipse-workspace/palindrome/daemon/6.4.1/daemon-10675.out.log
+2020-07-04T20:22:42.107+0530 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 477.6 MB]
+2020-07-04T20:22:42.130+0530 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2020-07-04T20:22:42.131+0530 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=aa972bac-4907-4f61-9311-15efc2ae8910,javaHome=/usr/local/jdk1.8.0_191,daemonRegistryDir=/home/siva/eclipse-workspace/palindrome/daemon,pid=10675,idleTimeout=10800000,priority=NORMAL,daemonOpts=-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=IN,-Duser.language=en,-Duser.variant]
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file '/home/siva/eclipse-workspace/palindrome/build.gradle' line: 2
+
+* What went wrong:
+Plugin [id: 'org.springframework.boot', version: '2.3.1.RELEASE'] was not found in any of the following sources:
+
+- Gradle Core Plugins (plugin is not in 'org.gradle' namespace)
+- Plugin Repositories (could not resolve plugin artifact 'org.springframework.boot:org.springframework.boot.gradle.plugin:2.3.1.RELEASE')
+  Searched in the following repositories:
+    Gradle Central Plugin Repository
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 2m 0s
+
+Publishing a build scan to scans.gradle.com requires accepting the Gradle Terms of Service defined at https://gradle.com/terms-of-service. Do you accept these terms? [yes, no] thread 15: client disconnection detected, canceling the build
+
+
+The build scan was not published due to a configuration problem.
+
+The Gradle Terms of Service have not been agreed to.
+
+For more information, please see https://gradle.com/help/plugin-terms-of-service.
+
+Alternatively, if you are using Gradle Enterprise, specify the server location.
+For more information, please see https://gradle.com/help/plugin-enterprise-config.
+
+Unable to execute command Build{id=3b5f2455-f8d5-4809-860a-ef68c83c08d1, currentDir=/home/siva/eclipse/jee-2019-03/eclipse} from socket connection from /127.0.0.1:40337 to /127.0.0.1:58722. Dispatching the failure to the daemon client
+org.gradle.internal.remote.internal.MessageIOException: Could not write '/127.0.0.1:58722'.
+	at org.gradle.internal.remote.internal.inet.SocketConnection.flush(SocketConnection.java:140)
+	at org.gradle.launcher.daemon.server.SynchronizedDispatchConnection.flush(SynchronizedDispatchConnection.java:62)
+	at org.gradle.launcher.daemon.server.DefaultDaemonConnection.completed(DefaultDaemonConnection.java:146)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy.doBuild(StartBuildOrRespondWithBusy.java:61)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ReturnResult.execute(ReturnResult.java:36)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.api.HandleReportStatus.execute(HandleReportStatus.java:33)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.HandleCancel.execute(HandleCancel.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.api.HandleInvalidateVirtualFileSystem.execute(HandleInvalidateVirtualFileSystem.java:46)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.api.HandleStop.execute(HandleStop.java:45)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecuter.executeCommand(DaemonCommandExecuter.java:55)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.handleCommand(DefaultIncomingConnectionHandler.java:163)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.receiveAndHandleCommand(DefaultIncomingConnectionHandler.java:136)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.run(DefaultIncomingConnectionHandler.java:124)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:51)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeWithNonBlockingRetry(SocketConnection.java:279)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeBufferToChannel(SocketConnection.java:267)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.flush(SocketConnection.java:261)
+	at org.gradle.internal.remote.internal.inet.SocketConnection.flush(SocketConnection.java:138)
+	... 25 more
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Services for Gradle user home directory '/home/siva/eclipse-workspace/palindrome' have not been released.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.

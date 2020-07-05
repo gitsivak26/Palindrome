@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Palindrome Form</title>
+		
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		
+		<style type="text/css">
+			body {background-color: #d3d7cf;}
+
+			.content-header {
+				text-align: center;
+				text-decoration: underline;
+				text-transform: uppercase;
+				padding-top: 50px;
+			}
+			
+			.main-section {
+				background-color: silver;
+				width: 700px;
+				height: 700px;
+				margin-left: 300px;
+				margin-top: 50px;
+			}
+			
+			.form-section {
+				margin: 150px 150px;
+				padding-bottom: 50px;
+			}
+			
+			.palindrome-submit {
+				text-align: justify;
+				line-height: 50px;
+				text-align: center;
+			}
+			.highlightError {
+				color: red;
+				padding-top: 10px;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$.ajax({
+			       type: "GET",
+			       url: "/v1/palindromes/",
+			       success: function (response) {
+			           	console.log("Success");
+			           	console.log(response);
+			           	
+			           	var response1 = JSON.stringify(response);
+			           	console.log(response1);
+			           	
+			           	//var response = '[{"id":"1", "list":"Appa"}, {"id":"2", "list":"Malayalam"}]';
+
+			        	// convert string to JSON
+			        	response = $.parseJSON(response1);
+			        	console.log(response);
+
+				        $(function() {
+				        	$.each(response, function(i, item) {
+				        	$("#palindromes").append($('<tr/>').append($('<td/>').text(item.list)));
+				        });
+			        });
+			       },
+			       error: function (error) {
+			           console.log(error.status);
+			       }
+				 });
+				
+				
+			});
+		</script>
+		
+	</head>
+	<body>
+		<div class="main-section">
+		
+			<div class="content-header">
+				<h3>Palindrome Form</h3>
+			</div>
+			
+			<div class="content-section">
+				<div class="form-section">
+					<form id="palindromeform" name="palindromeform" action="#">
+						<label>Enter the palindrome</label>
+						<input type="text" id="palindromeValue" name="palindromeValue" />
+						
+						<div class="palindrome-submit">
+							<input type="submit" id="palindrome-submit" name="palindrome-submit" value="Submit">
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div id="palindromes">
+			</div>
+			
+		</div>
+	</body>
+</html>
