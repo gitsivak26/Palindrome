@@ -29,17 +29,20 @@ public class reterivePalindrome {
 	
 	@PostMapping(path = "/v1/palindromes")
 	public @ResponseBody Iterable<Palindrome> storePalindrome(@RequestParam String palindromeValue) {
+		System.out.println("REST - Post controller called...");
 		
 		Palindrome palindrome = new Palindrome();
 		
 		// To check the field value is Empty or Null
-		if (!palindromeValue.isEmpty() || palindromeValue == null) {
+		if (!palindromeValue.isEmpty() || !(palindromeValue == null)) {
+			System.out.println("REST - Inside Not Empty...");
 			palindrome.setPalindromValue(palindromeValue);
 		} else {
 			System.out.println("The form value is Empty or Null");
 		}
 		
 		System.out.println("user Value = " + palindrome.getPalindromValue());
+		
 		palindromes = palindromeService.savePalindrome(palindrome);
 		
 		return palindromes;

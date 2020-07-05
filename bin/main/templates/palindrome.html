@@ -5,6 +5,7 @@
 		<title>Palindrome Form</title>
 		
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		
 		<style type="text/css">
 			body {background-color: #d3d7cf;}
@@ -42,36 +43,73 @@
 		
 		<script type="text/javascript">
 			$(document).ready(function () {
-				$.ajax({
+				
+				var response;
+				
+				/*$.ajax({
 			       type: "GET",
 			       url: "/v1/palindromes/",
+			       dataType: 'json',
 			       success: function (response) {
-			           	console.log("Success");
-			           	console.log(response);
-			           	
-			           	var response1 = JSON.stringify(response);
-			           	console.log(response1);
-			           	
-			           	//var response = '[{"id":"1", "list":"Appa"}, {"id":"2", "list":"Malayalam"}]';
+			           	var response = JSON.stringify(response);
+			           	//var response = '[{"id":1, "list":"Appa"}, {"id":2, "list":"Malayalam"}]';
 
 			        	// convert string to JSON
-			        	response = $.parseJSON(response1);
+			        	response = $.parseJSON(response);
 			        	console.log(response);
 
 				        $(function() {
 				        	$.each(response, function(i, item) {
-				        	$("#palindromes").append($('<tr/>').append($('<td/>').text(item.list)));
+				        	$("#palindromes").append($('<tr/>').append($('<td/>').text(item.palindromValue)));
 				        });
 			        });
 			       },
 			       error: function (error) {
 			           console.log(error.status);
 			       }
-				 });
+				 });*/
 				
-				
+				$('#palindromeform').submit(function(e) {
+					   var postData = $('#palindromeValue').val();
+					   $.ajax({
+					       type: "POST",
+					       url: "/v1/palindromes/",
+					       data: "palindromeValue=" + postData,
+					       dataType: 'json',
+					       success: function (response) {
+					           console.log("Success");
+					           response = JSON.stringify(response);
+					           	//var response = '[{"id":1, "list":"Appa"}, {"id":2, "list":"Malayalam"}]';
+
+					        	// convert string to JSON
+					        	response = $.parseJSON(response);
+					        	console.log(response);
+
+						        $(function() {
+						        	$("#palindromes").empty();
+						        	$.each(response, function(i, item) {
+						        		$("#palindromes").append($('<tr/>').append($('<td/>').text(item.palindromValue)));
+						        	});
+								});
+					       	},
+					       error: function (error) {
+					           console.log(error.status);
+					       }
+					   });
+
+					   e.preventDefault();
+					});
+				 
+				$(function() {
+					alert(response);
+					var palindromes = response;
+					  
+					$("#palindromeValue" ).autocomplete({
+						source: palindromes
+					});
+				});
 			});
-		</script>
+	  </script>
 		
 	</head>
 	<body>
@@ -85,7 +123,7 @@
 				<div class="form-section">
 					<form id="palindromeform" name="palindromeform" action="#">
 						<label>Enter the palindrome</label>
-						<input type="text" id="palindromeValue" name="palindromeValue" />
+						<input type="text" id="palindromeValue" name="palindromeValue" autocomplete=off />
 						
 						<div class="palindrome-submit">
 							<input type="submit" id="palindrome-submit" name="palindrome-submit" value="Submit">
