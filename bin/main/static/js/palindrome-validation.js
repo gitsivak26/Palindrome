@@ -1,15 +1,19 @@
+var responseData = [];
+
 $(document).ready(function () {
-	
-	var paly = [ ];
+
+	getPalindromes();
 	
 	$("#palindromeValue").val('');
+	$("#duplicate").hide();
+	$("#success").hide();
 	
 	// Does not allow special characters and numerics
 	$.validator.addMethod("checkSpecialCharacters", function (value, element) {
 		var postData = element.value;
 		var regex = /^[0-9-+()]*$/;
 		
-		if (postData == regex)
+		if(postData == regex)
 			return false;
 		else
 			return true;
@@ -54,15 +58,17 @@ $(document).ready(function () {
 			}
 		},
 		submitHandler: function(form) {
-			
+			$("#duplicate").hide();
 			var postData = $('#palindromeValue').val();
-				
+			
 			$.ajax({
 				type: "POST",
 				url: "/api/v1/palindromes/",
 				data: "palindromeValue=" + postData,
 				dataType: 'json',
 				success: function (response) {
+					$("#success").show();
+					$("#duplicate").hide();
 					response = JSON.stringify(response);
 					
 					// convert string to JSON
@@ -71,23 +77,49 @@ $(document).ready(function () {
 					$(function() {
 						$("#palindromes").empty();
 						$.each(response, function(i, item) {
-							//console.log(item.palindromValue);
-							paly.push(item.palindromValue);
+							responseData.push(item.palindromValue);
 							$("#palindromes").append($('<tr/>').append($('<td/>').text(item.palindromValue)));
 						});
 					});
 				},
 				error: function (error) {
-					console.log(error.status);
+					if (error.status == 400)
+						$("#success").hide();
+						$("#duplicate").show();
 				}
 			});
 		}
 	});
 	
 	$(function() {
-		console.dir("Value = " + paly);
 	    $( "#palindromeValue" ).autocomplete({
-	      source: paly
+	      source: responseData
 	    });
 	 });
 });
+
+function getPalindromes() {
+	$.ajax({
+		type: "GET",
+		url: "/api/v1/palindromes/",
+		dataType: 'json',
+		success: function (response) {
+			var response = JSON.stringify(response);
+			
+			// convert string to JSON
+			response = $.parseJSON(response);
+			
+			$(function() {
+				$("#palindromes").empty();
+				$("#palindromes").append($('<table/>').append($('<tr/>').append($('<th/>').text("Palindrome Values"))));
+				$.each(response, function(i, item) {
+					responseData.push(item.palindromValue);
+					$("#palindromes").append($('<tr/>').append($('<td/>').text(item.palindromValue)));
+				});
+			});
+		},
+		error: function (error) {
+			console.log(error.status);
+		}
+	});
+}
