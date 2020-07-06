@@ -76,6 +76,7 @@ $(document).ready(function () {
 					
 					$(function() {
 						$("#palindromes").empty();
+						$("#palindromes").append($('<tr/>').append($('<th/>').text("Palindrome Values")));
 						$.each(response, function(i, item) {
 							responseData.push(item.palindromValue);
 							$("#palindromes").append($('<tr/>').append($('<td/>').text(item.palindromValue)));
@@ -111,7 +112,7 @@ function getPalindromes() {
 			
 			$(function() {
 				$("#palindromes").empty();
-				$("#palindromes").append($('<table/>').append($('<tr/>').append($('<th/>').text("Palindrome Values"))));
+				$("#palindromes").append($('<tr/>').append($('<th/>').text("Palindrome Values")));
 				$.each(response, function(i, item) {
 					responseData.push(item.palindromValue);
 					$("#palindromes").append($('<tr/>').append($('<td/>').text(item.palindromValue)));

@@ -1,5 +1,5 @@
 body {
-	background-color: #d3d7cf;
+	background-color: #dfe1dc;
 	font-size: 17px;
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -24,7 +24,9 @@ input[type=text] {
 input[type=submit] {
 	background-color: DodgerBlue;
 	color: #fff;
-	width: 70%;
+	width: 50%;
+	font-weight: bolder;
+	font-size: larger;
 }
 
 label {
@@ -32,9 +34,17 @@ label {
 	font-weight: bold;
 }
 
-table, th, td {
+table, th, td, tr {
 	border-collapse: collapse;
 	border: 1px solid black;
+	padding: 5px 100px;
+	position: relative;
+	text-align: center;
+	width: 50%;
+}
+
+th {
+	background-color: #9d9d91;
 }
 
 .content-header {
@@ -46,20 +56,19 @@ table, th, td {
 }
 
 .main-section {
-	background-color: silver;
+	background-color: #d0d0d0;
 	width: 700px;
-	height: 700px;
 	margin-left: 300px;
 	margin-top: 50px;
 }
 
 .form-section {
-	margin: 80px 125px;
+	margin: 20px 90px;
 }
 
 .palindrome-submit {
 	text-align: justify;
-	line-height: 50px;
+	line-height: 100px;
 	text-align: center;
 }
 
@@ -72,17 +81,29 @@ table, th, td {
 
 .error-palindrome {
 	color: #D8000C;
-	margin: 10px 0px;
-	border: 2px solid powderblue;
+	margin: 20px 0px;
+	border: 1px solid #D8000C;
 	font-family: serif;
-	font-size: small;
+	font-size: medium;
+	font-weight: bold;
+	text-align: center;
+	background-color: #ff00002e;
+	padding: 7px;
 }
 
 .success-palindrome {
 	color: #4F8A10;
-	margin: 10px 0px;
-	border: 2px solid powderblue;
+	margin: 20px 0px;
+	border: 1px solid #4F8A10;
 	font-family: serif;
-	font-size: small;
+	font-size: medium;
+	font-weight: bold;
+	text-align: center;
+	background-color: #8ae234;
+	padding: 7px;
+}
+
+#palindromes {
+	padding: 0px 150px;
 }
 
